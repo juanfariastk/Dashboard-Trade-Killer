@@ -1,0 +1,44 @@
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.padding-novo-input{
+    padding:12px !important; 
+}
+
+.bg-novo-cinza{
+    background-color: rgb(43, 43, 43) !important;
+}
+
+.form-control-dark:focus{
+    background-color: rgb(238, 238, 238) !important;
+    color: black !important;
+    transform: scale(1.03);
+    transition: transform 200ms ease-in-out;
+}
+
+.text-white-1:hover{
+    color: rgb(238, 238, 238) !important; 
+}
+
+.item-li:hover {
+    transform: scale(1.2);
+    border-radius: 10%;
+    font-weight: bolder;
+    cursor: pointer;
+  }
+  
+.item-li.transicao_item {
+    transition: transform 150ms ease-in-out;
+}
+
+.item-li.transicao_item_final_nav {
+    transition: transform 150ms ease-in-out;
+}
+
+.img-efeito:hover{
+    box-shadow: 0px 0px 8px rgb(255, 255, 255);
+}
