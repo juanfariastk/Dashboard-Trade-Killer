@@ -1,3 +1,5 @@
+//criando o 1 gráfico do tradingview, com um módulo exterior para selecionar o ativo a ser analisado
+
 var sym = exchangeInfo.symbols,markup='';
 sym.forEach(d => {
     markup += '<option value="' + d.symbol + '">' + d.symbol + '</option>';
@@ -20,6 +22,7 @@ function carregar_grafico(){
     "locale": "in",
     "toolbar_bg": "#f1f3f6",
     "enable_publishing": false,
+    "hide_top_toolbar": true,
     "allow_symbol_change": true,
     "container_id": "tradingview_chart1"
     });

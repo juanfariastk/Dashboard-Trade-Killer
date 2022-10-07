@@ -85,8 +85,8 @@
 
             <div class="offcanvas-footer"> 
 
-                <div class="dropdown border-top">
-                    <a href="https://github.com/juanfariastk" class="d-flex align-items-center justify-content-center p-3 link-light text-decoration-none dropdown-toggle item-li transicao_item_final_nav" data-bs-toggle="dropdown" aria-expanded="false">
+                <div class="border-top">
+                    <a href="https://github.com/juanfariastk" class="d-flex align-items-center justify-content-center p-3 link-light text-decoration-none item-li transicao_item_final_nav" data-bs-toggle="dropdown" aria-expanded="false">
                       <img src="https://cabanadoleitor.com.br/wp-content/uploads/2020/07/EM_SB_YONE_Inventory.YONE_ACCESSORIES_10_16.png" alt="mdo" width="38" height="38" class="rounded-circle img-efeito">
                     </a>
                   </div>
@@ -100,13 +100,11 @@
         
       </nav>
 
-      <main class="row">
+      <section class="row">
 
-        <div class="col-md-12 row m-4">
+        <div class="col-md-12 row m-2">
 
           <div class="col-md-6">
-          
-            
 
             <div id="tradingview-widget-container">
 
@@ -116,21 +114,211 @@
                 <select class="form-select" onChange="carregar_grafico()" name="grafico_trading" id="pares"></select>
                 
               </div>
-    
             
             </div>
+
           </div>
 
-          <div class="col-md-5">
+          <div class="col-md-5 d-sm-none d-lg-block">
 
             <div class="tradingview-widget-container">
+
               <div id="tradingview_chart2"></div>
-              <div class="tradingview-widget-copyright"><a href="https://in.tradingview.com/symbols/BINANCE-BTCUSDT/" rel="noopener" target="_blank"></a>TradingView</div>
+              <div class="tradingview-widget-copyright"><a href="https://in.tradingview.com/symbols/BINANCE-BTCUSDT/" rel="noopener" target="_blank"></a></div>
+
             </div>
+
           </div>
 
         </div>
-      </main>
+
+      </section>
+
+      <section class="row m-1 mt-2">
+
+        <div class="col-xl-3 col-md-6 mb-4">
+
+            <div class="card border-left-primary shadow h-100 py-2 item-li2 transicao_item">
+
+                <div class="card-body">
+
+                    <div class="row no-gutters align-items-center">
+
+                        <div class="col mr-2">
+
+                            <div class="text-xs font-weight-bold text-success-1 text-uppercase mb-1">                        
+                                Média dos Investimentos por mês</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800" id="valor_investimentos_mensal">$40,000</div>
+
+                        </div>
+
+                        <div class="col-auto">
+                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+ 
+        <div class="col-xl-3 col-md-6 mb-4">
+
+            <div class="card border-left-info shadow h-100 py-2 item-li2 transicao_item">
+
+                <div class="card-body">
+
+                    <div class="row no-gutters align-items-center">
+
+                        <div class="col mr-2">
+
+                            <div class="text-xs font-weight-bold text-secondary-1 text-uppercase mb-1">Rentabilidade dos Índices
+                            </div>
+
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-auto">
+                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">65%</div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="progress progress-sm mr-2">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-dark" role="progressbar" style="width: 55%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        
+                        <div class="col-auto">
+                            <i class="fa-solid fa-chart-line fa-2x text-gray-300"></i>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-md-6 mb-4">
+
+          <div class="card border-left-success shadow h-100 py-2 item-li2 transicao_item">
+
+              <div class="card-body">
+
+                  <div class="row no-gutters align-items-center">
+
+                      <div class="col mr-2">
+
+                          <div class="text-xs font-weight-bold text-success-1 text-uppercase mb-1">
+                              Média dos Investimentos ao Ano</div>
+
+                          <div class="h5 mb-0 font-weight-bold text-gray-800" id="valor_investimentos_anual">$215,000</div>
+
+                      </div>
+
+                      <div class="col-auto">
+                          <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                      </div>
+
+                  </div>
+              </div>
+          </div>
+      </div>
+
+        <div class="col-xl-3 col-md-6 mb-4">
+
+            <div class="card border-left-warning shadow h-100 py-2 item-li2 transicao_item">
+
+                <div class="card-body">
+
+                    <div class="row no-gutters align-items-center">
+
+                        <div class="col mr-2">
+
+                            <div class="text-xs font-weight-bold text-secondary-1 text-uppercase mb-1">
+                                Propostas Abertas</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800" id="propostas_abertas">5</div>
+
+                        </div>
+
+                        <div class="col-auto">
+                            <i class="fas fa-comments fa-2x text-gray-300"></i>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <section class="row m-1">
+        
+        <div class="col-lg-6 mb-4">
+            
+            <div class="card shadow mb-4 mt-5">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-dark">Status do Dia</h6>
+                </div>
+                <div class="card-body">
+                  
+                    <h4 class="small font-weight-bold">Total Investido <span class="float-right">20%</span></h4>
+                    <div class="progress mb-4 ">
+                        <div class="progress-bar bg-dark" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+
+                    <h4 class="small font-weight-bold">Liquidez Total <span class="float-right">60%</span></h4>
+                    <div class="progress mb-4">
+                        <div class="progress-bar bg-dark" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+
+                    <h4 class="small font-weight-bold">Valor Retirado <span class="float-right">80%</span></h4>
+                    <div class="progress mb-4">
+                        <div class="progress-bar bg-dark" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-lg-6 mb-4">
+
+            <div class="card shadow mb-4" >
+                <div class="card-header bg-dark py-3">
+                    <h6 class="m-0 font-weight-bold text-light">Descrição do mercado</h6>
+                </div>
+
+                <div class="card-body" style="height:330px">
+
+                    <div class="" style="height:280px ;">
+                               
+                      <div class="tradingview-widget-container">
+                        <div class="tradingview-widget-container__widget"></div>
+                        <div class="tradingview-widget-copyright"></div>
+                        <p class="" id="p_desc_mercado"></p>
+                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async>
+                          {
+                          "width": "100%",
+                          "height": "100%",
+                          "colorTheme": "dark",
+                          "isTransparent": false,
+                          "locale": "br",
+                          "importanceFilter": "-1,0,1",
+                          "currencyFilter": "USD,EUR,ITL,NZD,CHF,AUD,FRF,JPY,ZAR,TRL,CAD,DEM,MXN,ESP,GBP"
+                        }
+                        </script>
+                        
+                      </div>
+                      
+                    </div>              
+                    
+                </div>
+            </div>
+
+
+        </div>
+      
+      </section>
+      
     
     <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
     <script src="./js/charts_disp.js"></script>

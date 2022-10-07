@@ -9,7 +9,19 @@
     outline: none !important;
     box-shadow: none !important;
 }
+.form-control:focus,
+.form-control:active{
+    outline: none !important;
+    box-shadow: none !important;
+}
 
+.text-secondary-1{
+    color: rgb(63, 63, 63);
+}
+
+.text-success-1{
+    color:rgb(76, 177, 67);
+}
 .padding-novo-input{
     padding:12px !important; 
 }
@@ -34,14 +46,21 @@
     border-radius: 10%;
     font-weight: bolder;
     cursor: pointer;
-  }
-  
+}
+
+.item-li2:hover{
+    transform: scale(1.1);
+}
+
+.item-li2.transicao_item{
+    transition: transform 300ms ease-in-out;
+}
 .item-li.transicao_item {
     transition: transform 150ms ease-in-out;
 }
 
 .item-li.transicao_item_final_nav {
-    transition: transform 150ms ease-in-out;
+    transition: transform 250ms ease-in-out;
 }
 
 .img-efeito:hover{

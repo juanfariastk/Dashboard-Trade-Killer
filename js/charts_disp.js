@@ -1,4 +1,4 @@
-var exchangeInfo = {
+let exchangeInfo = {
     "timezone": "UTC",
     "serverTime": 1565947895696,
     "rateLimits": [
