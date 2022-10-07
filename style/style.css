@@ -4,6 +4,11 @@
     outline: none !important;
     box-shadow: none !important;
 }
+.form-select:focus,
+.form-select:active{
+    outline: none !important;
+    box-shadow: none !important;
+}
 
 .padding-novo-input{
     padding:12px !important; 
@@ -42,3 +47,4 @@
 .img-efeito:hover{
     box-shadow: 0px 0px 8px rgb(255, 255, 255);
 }
+
