@@ -100,7 +100,7 @@ function compra_moeda() {
 
   if (moeda_comprada.value === 'Escolha uma moeda para comprar' || quantidade_comprada.value === 'Escolha uma quantidade') {
     div_error.innerHTML = erro_form
-    return
+    
   }
 
   return objeto_fim
