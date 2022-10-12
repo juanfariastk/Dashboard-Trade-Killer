@@ -1,3 +1,4 @@
+
 //função para consumir API com um array
 const cripto_moedas = async (lista = []) => {
   const lista_reposta = []
@@ -29,6 +30,7 @@ const cripto_moeda = async (id_moeda) => {
 let array_compra = []
 let moedas = []
 let quantidades_compradas = []
+const moedas_classicas = ['BTC', 'BCH', 'ETH', 'LTC', 'AAVE']
 
 const div_error = document.querySelector('#erro_fim')
 const div_graf_compra = document.querySelector("#grafico_compra")
@@ -56,28 +58,6 @@ const erro_form_cheio = `<div class="alert alert-warning alert-dismissible fade 
 </div>
 `
 
-//criando o 2 gráfico trading view
-
-new TradingView.widget(
-    {
-    "width": 880,
-    "height": 610,
-    "symbol": "FRED:SP500",
-    "interval": "5",
-    "timezone": "America/Sao_Paulo",
-    "theme": "Dark",
-    "style": "1",
-    "locale": "in",
-    "toolbar_bg": "#f1f3f6",
-    "enable_publishing": false,
-    "hide_top_toolbar": true,
-    "allow_symbol_change": true,
-    "studies": [
-      "RSI@tv-basicstudies"
-    ],
-    "container_id": "tradingview_chart2"
-  }
-    );
 
 //variavel de data
 const data = new Date();
@@ -127,8 +107,28 @@ function compra_moeda() {
 
 }
 
+//
+function criar_grafico(array_desc, array_dados, id_canva) {
+  new Chart(document.querySelector(`#${id_canva}`), {
+    type: 'bar',
+    data: {
+      labels: array_desc,
+      datasets: [
+        {
+          label: "Valor mais alto",
+          backgroundColor: ["#9EFCEB", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850"],
+          data: array_dados
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+    }
+  })
+}
+
 //função que gera um gráfico em qualquer div, porém possui parametros especificos ao gerar
-function criar_grafico(array_desc, array_dados, array_quantidade, id_canva) {
+function criar_grafico_especial(array_desc, array_dados, array_quantidade, id_canva) {
   new Chart(document.querySelector(`#${id_canva}`), {
     type: 'doughnut',
     data: {
@@ -203,12 +203,12 @@ function gerar_grafico_crescimento(array_label, array_valor) {
         label: 'Crescimento previsto',
         data: [array_valor[0], array_valor[1], array_valor[2]],
         backgroundColor: [
-          'rgba(255, 99, 132, 0.5)',
+          'rgba(136, 99, 255, 0.5)',
           'rgba(54, 162, 235, 0.2)',
           'rgba(255, 206, 86, 0.2)'
         ],
         borderColor: [
-          'rgba(255,99,132,1)',
+          'rgba(136,99,255,1)',
           'rgba(54, 162, 235, 1)',
           'rgba(255, 206, 86, 1)'
         ],
@@ -222,6 +222,13 @@ function gerar_grafico_crescimento(array_label, array_valor) {
     }
   });
 }
+
+//grafico index
+cripto_moedas(moedas_classicas).then(dados => {
+  criar_grafico(moedas_classicas, dados, 'grafico_1')
+})
+
+
 
 //ações para gerar o gráfico
 
@@ -238,9 +245,9 @@ function efetua_compra(event) {
     quantidades_compradas.push(compra_atual.quantidade)
   } else {
     cripto_moedas(moedas).then(dados => {
-      criar_grafico(moedas, dados, quantidades_compradas, 'grafico_valor_gasto')
+      criar_grafico_especial(moedas, dados, quantidades_compradas, 'grafico_valor_gasto')
       let media_final= parseFloat(((parseFloat(dados[0] * parseInt(quantidades_compradas[0])).toFixed(3)) + (parseFloat(dados[1] * parseInt(quantidades_compradas[1])).toFixed(3)) + (parseFloat(dados[2] * parseInt(quantidades_compradas[2])).toFixed(3))/3)).toFixed(3)
-      parag_total.textContent = ' Média de gastos investidos: ' + media_final
+      parag_total.textContent = ' Média de capital investido: ' + media_final
     })
     cripto_moedas(moedas).then(dados =>{
       gerar_grafico_crescimento(array_compra, dados)

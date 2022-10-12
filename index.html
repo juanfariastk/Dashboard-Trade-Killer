@@ -100,36 +100,45 @@
         
       </nav>
 
-      <section class="row">
+      <section class="row ">
 
-        <div class="col-md-12 row m-2 d-sm-none d-lg-block">
+        <div class="col-lg-6 row m-2 d-sm-none d-md-none d-lg-block">
 
-          <div class="col-md-6">
+        <div class="col-md-5">
 
             <div id="tradingview-widget-container">
 
               <div id="tradingview_chart1"></div>
-              <div class="input-group ms-3 mt-2 w-50">
-                <span class="input-group-text text-light bg-dark d-sm-block">Selecione uma Paridade</span>
-                <select class="form-select" onChange="carregar_grafico()" name="grafico_trading" id="pares"></select>
-                
-              </div>
+              
             
             </div>
+            <div class="ms-3 mt-2 d-flex input-group">
+              <label class="input-group-text text-light bg-dark" for="pares">Selecione uma Paridade</label>
+              <select class="form-select form-select-md" onChange="carregar_grafico()" name="grafico_trading" id="pares"></select>
+              
+            </div>
+        </div>
 
-          </div>
+          
 
-          <div class="col-md-5 d-none">
+        </div>
 
-            <div class="tradingview-widget-container">
+        <div class="col-lg-5 m-2 col-sm-12 mt-4">
 
-              <div id="tradingview_chart2"></div>
-              <div class="tradingview-widget-copyright"><a href="https://in.tradingview.com/symbols/BINANCE-BTCUSDT/" rel="noopener" target="_blank"></a></div>
+          <div class="card shadow">
 
+            <div class="card-header bg-dark">
+              <h6 class=" text-light mt-1">Cotação da Principais Moedas</h6>
             </div>
 
-          </div>
+              <div class="card-body">
 
+                <div>
+                  <canvas id="grafico_1" width="1000" height="600"></canvas>
+                </div>
+
+              </div>
+          </div>
         </div>
 
       </section>
@@ -319,7 +328,7 @@
       
       </section>
       
-    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
     <script src="./js/charts_disp.js"></script>
     <script type="text/javascript" src="./js/script_trading_view.js"></script>
