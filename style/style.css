@@ -26,6 +26,9 @@
     padding:12px !important; 
 }
 
+.bg-geral{
+    background-color: #dfeaf3;
+}
 .bg-novo-cinza{
     background-color: rgb(43, 43, 43) !important;
 }
@@ -65,5 +68,100 @@
 
 .img-efeito:hover{
     box-shadow: 0px 0px 8px rgb(255, 255, 255);
+}
+
+.display-7{
+    font-size: calc(1.175rem + 0.2vw);
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.planos{
+    text-align: center;
+    background: #fff;
+    margin: 0 -15px;
+    box-shadow: 0 0 10px #ababab;
+    padding-bottom: 40px;
+    border-radius: 10px;
+    color: #cad0de;
+    transform: scale(1);
+    transition: all .5s ease 0s;
+}
+.planos:hover{
+    transform: scale(1.05);
+    z-index: 1;
+}
+
+.planos .planos-header{
+    padding: 20px 0;
+    background: #f5f6f9;
+    border-radius: 0px 0px 0% 10%;
+    transition: all .5s ease 0s;
+}
+
+.planos:hover .planos-header{
+    background: #464646;
+}
+
+.planos .planos-header i{
+    font-size: 50px;
+    color: #858c9a;
+    margin-bottom: 10px;
+    transition: all .5s ease 0s;
+}
+
+.planos .planos-valores{
+    font-size: 20px;
+    color: #5c5c5c;
+    transition: all .5s ease 0s;
+}
+
+.planos .mes {
+    margin-top: -3px;
+    display: block;
+    font-size: 18px;
+    color: #cad0de;
+}
+
+.planos:hover .mes,
+.planos:hover .planos-valores,
+.planos:hover .planos-header i {
+    color: #fff;
+}
+
+.planos .topo1 {
+    font-size: 24px;
+    color: #2b2b2b;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.planos .planos-conteudos ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.planos .planos-conteudos ul li {
+    line-height: 30px;
+    color: #797979;
+}
+
+.planos .planos-cadastro a {
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    color: #fff;
+    padding: 10px 35px;
+    border-radius: 20px;
+    background: #c2c2c2;
+    text-transform: uppercase;
+    transition: all .3s ease 0s
+}
+
+.planos .planos-cadastro a:hover {
+    background: #2b2b2b;
+    box-shadow: 0 0 10px #00000093
 }
 

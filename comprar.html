@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Trade Killer!</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./fontawesome-free-6.2.0-web/css/all.css">
+    <link rel="shortcut icon" href="./img/logo_trade.png" type="image/x-icon">
+  </head>
+  <body class="bg-geral">
+
+    <header class="navbar navbar-dark sticky-top bg-dark flex-nowrap p-0 shadow">
+
+        <button class="navbar-toggler me-auto border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+        
+
+        <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <img src="./img/img-nav.png" class="img-fluid me-auto" alt="" style="height:50px ;">
+
+        
+        <div class="w-75 me-auto input-group">
+            <input class="form-control form-control-dark text-white bg-novo-cinza padding-novo-input rounded-0 border-0 " type="text" placeholder="Pesquisar" aria-label="Search" id="area_pesq">
+        </div>
+
+        <div class="navbar-nav me-auto">
+          <div class="nav-item text-nowrap">
+            <a class="nav-link px-3" href="#">Sign out</a>
+          </div>
+
+        </div>
+      </header>
+
+    <nav class="">
+
+        <div class="d-flex">
+
+          <div class="">
+
+
+          <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel" style="width:100px ;">
+
+            <div class="offcanvas-header">
+              <img src="./img/logo_trade.png" class="img-fluid" alt="">
+            </div>
+
+        
+            <div class="offcanvas-body" >
+
+                <a href="/" class="d-block p-3 link-dark text-decoration-none" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="Icon-only">
+                    <img src="" alt="">
+                    <span class="visually-hidden"></span>
+                  </a>
+
+                  <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+                    
+                    <li class="nav-item item-li transicao_item">
+                      <a href="./index.html" class="nav-link py-2 border-bottom rounded-0 text-white text-white-1 fs-4" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="left" aria-label="Home" data-bs-original-title="Home">
+                        <i class="fa-solid fa-chart-column"></i>
+                      </a>
+                    </li>
+
+                    <li class="nav-item item-li transicao_item">
+                      <a href="./planos.html" class="nav-link py-2 border-bottom rounded-0 text-white text-white-1 fs-4" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="left" aria-label="Home" data-bs-original-title="Home">
+                        <i class="fa-solid fa-hand-holding-dollar"></i>
+                      </a>
+                    </li>
+
+                    <li class="nav-item item-li transicao_item">
+                      <a href="./comprar.html" class="nav-link py-2 border-bottom rounded-0 text-white text-white-1 fs-4" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="left" aria-label="Home" data-bs-original-title="Home">
+                        <i class="fa-regular fa-money-bill-1"></i>
+                      </a>
+                    </li>
+                   
+                  </ul>
+                  
+                
+            </div>
+
+            <div class="offcanvas-footer"> 
+
+                <div class="border-top">
+                    <a href="https://github.com/juanfariastk" class="d-flex align-items-center justify-content-center p-3 link-light text-decoration-none item-li transicao_item_final_nav" data-bs-toggle="dropdown" aria-expanded="false">
+                      <img src="https://cabanadoleitor.com.br/wp-content/uploads/2020/07/EM_SB_YONE_Inventory.YONE_ACCESSORIES_10_16.png" alt="mdo" width="38" height="38" class="rounded-circle img-efeito">
+                    </a>
+                  </div>
+
+            </div>
+
+            
+          </div>
+          
+        </div>
+        
+      </nav>
+    
+    
+    <section class="row m-2 mt-3">
+
+
+        <div class="col-xl-5 col-lg-5">
+
+            <div class="card shadow mb-4 border border-0">
+
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between bg-dark">
+
+                    <h6 class="m-0 text-white fs-5">Comprar Cripto</h6>
+
+                </div>
+
+                <div class="card-body">
+
+                    <form onsubmit="efetua_compra(event)">
+
+                        <div id="erro_fim">
+                        </div>
+
+                        <div class="m-2">
+                          <label class="form-label">Moeda</label>
+                          <select id="moedas_compra" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                            <option selected>Escolha uma moeda para comprar</option>
+                            <option value="BTC">BITCOIN</option>
+                            <option value="LTC">LITECOIN</option>
+                            <option value="ETH">ETHEREUM</option>
+                          </select>
+                        </div>
+                    
+                        <div class="m-2">
+                          <label class="form-label">Quantidade</label>
+                          <input id="quantidade_compra" type="number" class="form-control form-control-lg mb-3"
+                            placeholder="Digite a quantidade" >
+                        </div>
+                    
+                        <div class="m-2">
+                          <button class="btn btn-dark border-light fw-bold">Comprar</button>
+                        </div>
+                    
+                      </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-xl-7 col-lg-6 d-none" id="compra_graf_1">
+            <div class="card shadow mb-4">
+
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-dark">Moeda Compradas</h6>
+                </div>
+
+                <div class="card-body">
+
+                    <div class="m-2">
+                        <canvas id="grafico_compra" width="1000px" height="400px" ></canvas>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="container-fluid">
+        <div class="row">
+
+            <div class="col-lg-6 d-none" id="valor_graf">
+    
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <span class="fs-5">Valor Gasto</span>
+                    </div>
+
+                    <div class="card-body">
+
+                        <div class="m-2">
+                            <canvas id="grafico_valor_gasto" width="800px" height="300px" ></canvas>
+                        </div>
+                        <p class="text-center my-1 display-7" id="total_gasto"></p>
+                    </div>
+
+                </div>
+
+    
+            </div>
+    
+            <div class="col-lg-6 d-none" id="prob_graf">
+    
+                <div class="card shadow mb-4 border border-0">
+                    <div class="card-header py-3 bg-dark">
+                        <span class="m-0 text-light fs-5">Estimativa de Crescimento</span>
+                    </div>
+                    <div class="card-body">
+                        
+                        <div class="m-2">
+                            <canvas id="grafico_crescimento" width="600px" height="250px" ></canvas>
+                        </div>
+
+                    </div>
+                </div>
+    
+            </div>
+    
+        </div>
+    </section>
+    
+
+    <footer class="text-center text-lg-start bg-novo-cinza d-none" id="footer_fim">
+
+      <div class="p-3">
+      </div>
+    
+
+      <div class="text-center text-white p-3 display-7" style="background-color: rgba(0, 0, 0, 0.2);">
+        &copy 2022 @Juanfariastk
+      </div>
+
+    </footer>
+ 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./js/script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  </body>
+</html>
