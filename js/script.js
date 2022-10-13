@@ -170,7 +170,7 @@ function gerar_grafico_compra(array) {
     data: {
       labels: [array[0].moeda, array[1].moeda, array[2].moeda],
       datasets: [{
-        label: 'Quantidade Comprada',
+        label: 'Volume Comprado',
         data: [array[0].quantidade, array[1].quantidade, array[2].quantidade],
         backgroundColor: [
           'rgba(255, 99, 132, 0.5)',
@@ -186,6 +186,7 @@ function gerar_grafico_compra(array) {
       }]
     },
     options: {
+      
       //cutoutPercentage: 30,
       responsive: true,
 
